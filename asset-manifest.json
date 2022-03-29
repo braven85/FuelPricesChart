@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/FuelPricesChart/static/css/main.36a6750a.css",
-    "main.js": "/FuelPricesChart/static/js/main.ac5d5ed5.js",
+    "main.js": "/FuelPricesChart/static/js/main.0b98b1c8.js",
     "static/js/787.187c8933.chunk.js": "/FuelPricesChart/static/js/787.187c8933.chunk.js",
     "index.html": "/FuelPricesChart/index.html",
     "main.36a6750a.css.map": "/FuelPricesChart/static/css/main.36a6750a.css.map",
-    "main.ac5d5ed5.js.map": "/FuelPricesChart/static/js/main.ac5d5ed5.js.map",
+    "main.0b98b1c8.js.map": "/FuelPricesChart/static/js/main.0b98b1c8.js.map",
     "787.187c8933.chunk.js.map": "/FuelPricesChart/static/js/787.187c8933.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.36a6750a.css",
-    "static/js/main.ac5d5ed5.js"
+    "static/js/main.0b98b1c8.js"
   ]
 }
