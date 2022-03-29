@@ -15,6 +15,7 @@ import AddPrice from "../AddPrice/AddPrice";
 
 const FuelChart = () => {
   const [cenyPaliw, setCenyPaliw] = useState([]);
+  const [nodes, setNodes] = useState([]);
 
   ChartJS.register(
     CategoryScale,
@@ -71,6 +72,7 @@ const FuelChart = () => {
 
       for (const key in dane) {
         loadedData.push({
+          key: key,
           cena: dane[key].cena,
           data: dane[key].data,
         });
@@ -92,16 +94,27 @@ const FuelChart = () => {
     );
   };
 
+  const deletePriceHandler = async (nodeId) => {
+    await fetch(
+      `https://fuelchart-910bb-default-rtdb.europe-west1.firebasedatabase.app/prices/${nodeId}.json`,
+      {
+        method: "DELETE",
+      }
+    );
+  };
+
   let labels = [];
   let ceny = [];
+  let keys = [];
 
   useEffect(() => {
     fetchPricesHandler();
-  }, [labels, ceny]);
+  }, [labels, ceny, keys]);
 
   for (const dane of cenyPaliw) {
     labels.push(dane.data);
     ceny.push(dane.cena);
+    keys.push(dane.key);
   }
 
   const data = {
