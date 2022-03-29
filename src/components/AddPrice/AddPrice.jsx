@@ -1,5 +1,6 @@
 import styles from "./AddPrice.module.css";
 import { useRef } from "react";
+import { nanoid } from "nanoid";
 
 const AddPrice = (props) => {
   const nowaData = useRef("");
@@ -7,7 +8,9 @@ const AddPrice = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    const id = nanoid();
     const prices = {
+      id: id,
       data: nowaData.current.value,
       cena: nowaCena.current.value,
     };
